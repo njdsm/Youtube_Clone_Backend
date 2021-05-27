@@ -13,18 +13,10 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-<<<<<<< HEAD
             name='Comments',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('comment', models.CharField(blank=True, max_length=250, null=True)),
-=======
-            name='Comment',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('date', models.DateField(verbose_name='%m/%d/%Y')),
-                ('like_count', models.IntegerField(default=0)),
->>>>>>> 16d23463d759f295de212ba6ff23f53e44781bc0
-            ],
+            ]
         ),
     ]
