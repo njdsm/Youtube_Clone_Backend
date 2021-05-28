@@ -39,6 +39,11 @@ class CommentDetail(APIView):
     def put(self, request, pk):
         comment = self.get_object(pk)
         serializer = CommentSerializer(comment, data=request.data)
+        try:
+            if request.query_params['like']:
+                comment.like_count = comment.like_count + 1
+        except:
+            pass
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
